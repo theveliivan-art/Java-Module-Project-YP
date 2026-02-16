@@ -1,17 +1,15 @@
-import java.util.ArrayList;
-
 public class Gonka {
-    ArrayList<Auto> autoList;
+    int distance=0;
+    String winner="";
 
-    Gonka(ArrayList<Auto> autoList){this.autoList = autoList;}
-
-    String winnersName(){
-        Auto winnersAuto = autoList.get(0);
-        for (Auto tekAuto:autoList){
-            if (tekAuto.getDistance()>winnersAuto.getDistance()) {
-                winnersAuto = tekAuto;
-            }
+    public void findWinner(Auto newAuto){
+        if (distance<newAuto.getDistance()){
+            distance = newAuto.getDistance();
+            winner = newAuto.name;
         }
-    return winnersAuto.name;
+
+    }
+    String winnersName(){
+        return this.winner;
     }
 }

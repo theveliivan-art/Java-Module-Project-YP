@@ -1,6 +1,6 @@
 public class Auto {
-    String name;
-    int speed;
+    final String name;
+    final int speed;
 
     Auto(String name, int speed){
         this.name = name;
